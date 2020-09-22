@@ -1,6 +1,6 @@
 
-class Aluno:
-    def __init__(self, nome, matricula, telefone, email, uffmail, status):
+class Aluno:                                                                        #Cria a classe Aluno
+    def __init__(self, nome, matricula, telefone, email, uffmail, status):          #Constroi a classe Aluno
         self.nome = nome
         self.matricula = matricula
         self.telefone = telefone
@@ -8,7 +8,7 @@ class Aluno:
         self.uffmail = uffmail
         self.status = status
 
-    def getnome(self):
+    def getnome(self):                                                              #Define os metodos da classe Aluno
         return self.nome
 
     def getmatricula(self):

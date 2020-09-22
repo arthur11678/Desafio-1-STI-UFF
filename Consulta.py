@@ -2,17 +2,14 @@ from Aluno import Aluno
 import csv
 
 
-class Consulta:
+class Consulta:                                                                                                                                            #Cria uma classe Consulta
 
-    def __init__(self, matricula, aluno):
+    def __init__(self, matricula, aluno):                                                                                                                  #Constroi a classe Consulta
         self.matricula = matricula
         self.aluno = aluno
 
-    def setaluno(self, aluno):
-        self.aluno = aluno
-
-    def alunopodecriaruffmail(self):
-        with open('alunos.csv', 'r') as alunos:
+    def alunopodecriaruffmail(self):                                                                                                                        #Define o método quem verifica se o aluno pode crair o UFFmail
+        with open('alunos.csv', 'r') as alunos:                                                                                                             #O método retorna um erro caso não seja possivel criar o UFFmail
             alunos_csv = csv.DictReader(alunos)
             matriculaIsmissing = True
             for linha in alunos_csv:
