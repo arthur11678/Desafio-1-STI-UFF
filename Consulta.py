@@ -17,7 +17,7 @@ class Consulta:                                                                 
                     matriculaIsmissing = False
                     if linha['status'] == 'Ativo':
                         if linha['uffmail'] == '':
-                            aluno = Aluno(linha['nome'], linha['matricula'], linha['telefone'], linha['email'], linha['uffmail'], linha['status'])
+                            aluno = Aluno(linha['nome'], linha['matricula'], linha['telefone'], linha['email'], linha['uffmail'], linha['status'])          #Retorna um objeto Aluno com os dados do aluno
                             return aluno
                         else:
                             return -1

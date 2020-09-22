@@ -13,9 +13,7 @@ class Cadastro:                                                                 
             alunos_csv = csv.DictReader(arquivo)
             for linha in alunos_csv:                                                        #Executa um for comparando o conteudo das linhas do arquivo com a matricula do aluno a ser escrito no CSV
                 if self.aluno.matricula == linha['matricula']:
-                    linha['uffmail'] = self.aluno.uffmail                                   #Escreve o UFFmail do usuario na linha
-                linhas_arq.append(linha)                                                    #Arnazena todas as linha, ja atualizadas, numa nova variavel
-        print(linhas_arq)
+                    linha['uffmail'] = self.aluno.uffmail                                   #Escreve o UFFmail do usuario na linha                                                   #Arnazena todas as linha, ja atualizadas, numa nova variavel
         cabecalho = ['nome', 'matricula', 'telefone', 'email', 'uffmail', 'status']         #Cria um cabeçalho para o arquivo CVS
         with open('alunos.csv', 'w') as arquivo:                                            #Abre o arquivo em modo de escrita 
             escrever = csv.DictWriter(arquivo, fieldnames= cabecalho)                       
